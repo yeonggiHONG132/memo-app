@@ -2,7 +2,7 @@
 
 import { useState } from 'react';
 import { useMemos } from '@/hooks/useMemos';
-import { Memo } from '@/types/memo';
+import { Memo, MemoFormData } from '@/types/memo';
 import MemoList from '@/components/MemoList';
 import MemoForm from '@/components/MemoForm';
 
@@ -23,12 +23,12 @@ export default function Home() {
   const [isFormOpen, setIsFormOpen] = useState(false);
   const [editingMemo, setEditingMemo] = useState<Memo | null>(null);
 
-  const handleCreateMemo = (formData: any) => {
+  const handleCreateMemo = (formData: MemoFormData) => {
     createMemo(formData);
     setIsFormOpen(false);
   };
 
-  const handleUpdateMemo = (formData: any) => {
+  const handleUpdateMemo = (formData: MemoFormData) => {
     if (editingMemo) {
       updateMemo(editingMemo.id, formData);
       setEditingMemo(null);
