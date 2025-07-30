@@ -1,10 +1,10 @@
-'use client';
+'use client'
 
-import { useState } from 'react';
-import { useMemos } from '@/hooks/useMemos';
-import { Memo, MemoFormData } from '@/types/memo';
-import MemoList from '@/components/MemoList';
-import MemoForm from '@/components/MemoForm';
+import { useState } from 'react'
+import { useMemos } from '@/hooks/useMemos'
+import { Memo, MemoFormData } from '@/types/memo'
+import MemoList from '@/components/MemoList'
+import MemoForm from '@/components/MemoForm'
 
 export default function Home() {
   const {
@@ -18,32 +18,32 @@ export default function Home() {
     deleteMemo,
     searchMemos,
     filterByCategory,
-  } = useMemos();
+  } = useMemos()
 
-  const [isFormOpen, setIsFormOpen] = useState(false);
-  const [editingMemo, setEditingMemo] = useState<Memo | null>(null);
+  const [isFormOpen, setIsFormOpen] = useState(false)
+  const [editingMemo, setEditingMemo] = useState<Memo | null>(null)
 
   const handleCreateMemo = (formData: MemoFormData) => {
-    createMemo(formData);
-    setIsFormOpen(false);
-  };
+    createMemo(formData)
+    setIsFormOpen(false)
+  }
 
   const handleUpdateMemo = (formData: MemoFormData) => {
     if (editingMemo) {
-      updateMemo(editingMemo.id, formData);
-      setEditingMemo(null);
+      updateMemo(editingMemo.id, formData)
+      setEditingMemo(null)
     }
-  };
+  }
 
   const handleEditMemo = (memo: Memo) => {
-    setEditingMemo(memo);
-    setIsFormOpen(true);
-  };
+    setEditingMemo(memo)
+    setIsFormOpen(true)
+  }
 
   const handleCloseForm = () => {
-    setIsFormOpen(false);
-    setEditingMemo(null);
-  };
+    setIsFormOpen(false)
+    setEditingMemo(null)
+  }
 
   return (
     <div className="min-h-screen bg-gray-50">
@@ -56,14 +56,24 @@ export default function Home() {
                 <h1 className="text-2xl font-bold text-gray-900">📝 메모 앱</h1>
               </div>
             </div>
-            
+
             <div className="flex items-center space-x-4">
               <button
                 onClick={() => setIsFormOpen(true)}
                 className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-lg shadow-sm text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-colors"
               >
-                <svg className="w-4 h-4 mr-2" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4v16m8-8H4" />
+                <svg
+                  className="w-4 h-4 mr-2"
+                  fill="none"
+                  stroke="currentColor"
+                  viewBox="0 0 24 24"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    strokeWidth={2}
+                    d="M12 4v16m8-8H4"
+                  />
                 </svg>
                 새 메모
               </button>
@@ -95,5 +105,5 @@ export default function Home() {
         editingMemo={editingMemo}
       />
     </div>
-  );
+  )
 }
