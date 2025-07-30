@@ -135,7 +135,7 @@ export default function MemoForm({
                                         title: e.target.value
                                     }))
                                 }
-                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                className="placeholder-gray-400 text-gray-400 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                                 placeholder="메모 제목을 입력하세요"
                                 required
                             />
@@ -158,7 +158,7 @@ export default function MemoForm({
                                         category: e.target.value
                                     }))
                                 }
-                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                className="text-gray-400 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                             >
                                 {DEFAULT_CATEGORIES.map(category => (
                                     <option key={category} value={category}>
@@ -185,7 +185,7 @@ export default function MemoForm({
                                         content: e.target.value
                                     }))
                                 }
-                                className="w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"
+                                className="placeholder-gray-400 text-gray-400 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors resize-none"
                                 placeholder="메모 내용을 입력하세요"
                                 rows={8}
                                 required
@@ -203,7 +203,7 @@ export default function MemoForm({
                                     value={tagInput}
                                     onChange={e => setTagInput(e.target.value)}
                                     onKeyDown={handleTagInputKeyDown}
-                                    className="flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
+                                    className="placeholder-gray-400 text-black flex-1 px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors"
                                     placeholder="태그를 입력하고 Enter를 누르세요"
                                 />
                                 <button
