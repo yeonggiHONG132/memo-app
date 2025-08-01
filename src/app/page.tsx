@@ -26,14 +26,14 @@ export default function Home() {
   const [viewingMemo, setViewingMemo] = useState<Memo | null>(null)
   const [isViewerOpen, setIsViewerOpen] = useState(false)
 
-  const handleCreateMemo = (formData: MemoFormData) => {
-    createMemo(formData)
+  const handleCreateMemo = async (formData: MemoFormData) => {
+    await createMemo(formData)
     setIsFormOpen(false)
   }
 
-  const handleUpdateMemo = (formData: MemoFormData) => {
+  const handleUpdateMemo = async (formData: MemoFormData) => {
     if (editingMemo) {
-      updateMemo(editingMemo.id, formData)
+      await updateMemo(editingMemo.id, formData)
       setEditingMemo(null)
     }
   }
@@ -62,6 +62,10 @@ export default function Home() {
     setEditingMemo(memo)
     setIsFormOpen(true)
     setIsViewerOpen(false)
+  }
+
+  const handleDeleteMemo = async (id: string) => {
+    await deleteMemo(id)
   }
 
   return (
@@ -111,7 +115,7 @@ export default function Home() {
           onSearchChange={searchMemos}
           onCategoryChange={filterByCategory}
           onEditMemo={handleEditMemo}
-          onDeleteMemo={deleteMemo}
+          onDeleteMemo={handleDeleteMemo}
           onViewMemo={handleViewMemo}
           stats={stats}
         />
@@ -131,7 +135,7 @@ export default function Home() {
         isOpen={isViewerOpen}
         onClose={handleCloseViewer}
         onEdit={handleEditFromViewer}
-        onDelete={deleteMemo}
+        onDelete={handleDeleteMemo}
       />
     </div>
   )

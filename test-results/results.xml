@@ -1,0 +1,132 @@
+<testsuites id="" name="" tests="3" failures="3" skipped="0" errors="0" time="57.877939000000005">
+<testsuite name="memo-creation.spec.ts" timestamp="2025-08-01T06:17:09.977Z" hostname="chromium" tests="1" failures="1" skipped="0" time="30.138" errors="0">
+<testcase name="메모 관리 › 새 메모를 작성할 수 있다" classname="memo-creation.spec.ts" time="30.138">
+<failure message="memo-creation.spec.ts:4:7 새 메모를 작성할 수 있다" type="FAILURE">
+<![CDATA[  [chromium] › memo-creation.spec.ts:4:7 › 메모 관리 › 새 메모를 작성할 수 있다 ──────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.selectOption: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByLabel('카테고리')
+        - locator resolved to <select id="category" class="text-gray-400 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">…</select>
+      - attempting select option action
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+        - waiting 20ms
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+          - waiting 100ms
+        44 × waiting for element to be visible and enabled
+           - did not find some options
+         - retrying select option action
+           - waiting 500ms
+
+
+      21 |     // 6. 카테고리 선택 드롭다운에서 "일반"을 선택합니다.
+      22 |     // '일반'은 `MEMO_CATEGORIES`에 정의된 표시 이름입니다.
+    > 23 |     await page.getByLabel('카테고리').selectOption({ label: '일반' });
+         |                                   ^
+      24 |
+      25 |     // 7. '저장' 버튼을 클릭합니다.
+      26 |     await page.getByRole('button', { name: '저장하기' }).click();
+        at C:\Users\masocampus\Desktop\memo\tests\memo-creation.spec.ts:23:35
+
+    Error Context: ..\test-results\memo-creation-메모-관리-새-메모를-작성할-수-있다-chromium\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|memo-creation-메모-관리-새-메모를-작성할-수-있다-chromium\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="memo-creation.spec.ts" timestamp="2025-08-01T06:17:09.977Z" hostname="firefox" tests="1" failures="1" skipped="0" time="30.125" errors="0">
+<testcase name="메모 관리 › 새 메모를 작성할 수 있다" classname="memo-creation.spec.ts" time="30.125">
+<failure message="memo-creation.spec.ts:4:7 새 메모를 작성할 수 있다" type="FAILURE">
+<![CDATA[  [firefox] › memo-creation.spec.ts:4:7 › 메모 관리 › 새 메모를 작성할 수 있다 ───────────────────────────────────
+
+    Test timeout of 30000ms exceeded.
+
+    Error: locator.selectOption: Test timeout of 30000ms exceeded.
+    Call log:
+      - waiting for getByLabel('카테고리')
+        - locator resolved to <select id="category" class="text-gray-400 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">…</select>
+      - attempting select option action
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+        - waiting 20ms
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+          - waiting 100ms
+        31 × waiting for element to be visible and enabled
+           - did not find some options
+         - retrying select option action
+           - waiting 500ms
+        - waiting for element to be visible and enabled
+      - element was detached from the DOM, retrying
+
+
+      21 |     // 6. 카테고리 선택 드롭다운에서 "일반"을 선택합니다.
+      22 |     // '일반'은 `MEMO_CATEGORIES`에 정의된 표시 이름입니다.
+    > 23 |     await page.getByLabel('카테고리').selectOption({ label: '일반' });
+         |                                   ^
+      24 |
+      25 |     // 7. '저장' 버튼을 클릭합니다.
+      26 |     await page.getByRole('button', { name: '저장하기' }).click();
+        at C:\Users\masocampus\Desktop\memo\tests\memo-creation.spec.ts:23:35
+
+    Error Context: ..\test-results\memo-creation-메모-관리-새-메모를-작성할-수-있다-firefox\error-context.md
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|memo-creation-메모-관리-새-메모를-작성할-수-있다-firefox\error-context.md]]
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="memo-creation.spec.ts" timestamp="2025-08-01T06:17:09.977Z" hostname="webkit" tests="1" failures="1" skipped="0" time="17.119" errors="0">
+<testcase name="메모 관리 › 새 메모를 작성할 수 있다" classname="memo-creation.spec.ts" time="17.119">
+<failure message="memo-creation.spec.ts:4:7 새 메모를 작성할 수 있다" type="FAILURE">
+<![CDATA[  [webkit] › memo-creation.spec.ts:4:7 › 메모 관리 › 새 메모를 작성할 수 있다 ────────────────────────────────────
+
+    Error: locator.selectOption: Target page, context or browser has been closed
+    Call log:
+      - waiting for getByLabel('카테고리')
+        - locator resolved to <select id="category" class="text-gray-400 w-full px-3 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-blue-500 transition-colors">…</select>
+      - attempting select option action
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+        - waiting 20ms
+        2 × waiting for element to be visible and enabled
+          - did not find some options
+        - retrying select option action
+          - waiting 100ms
+        - waiting for element to be visible and enabled
+        - did not find some options
+      - retrying select option action
+        - waiting 500ms
+        - waiting for element to be visible and enabled
+      - element was detached from the DOM, retrying
+
+
+      21 |     // 6. 카테고리 선택 드롭다운에서 "일반"을 선택합니다.
+      22 |     // '일반'은 `MEMO_CATEGORIES`에 정의된 표시 이름입니다.
+    > 23 |     await page.getByLabel('카테고리').selectOption({ label: '일반' });
+         |                                   ^
+      24 |
+      25 |     // 7. '저장' 버튼을 클릭합니다.
+      26 |     await page.getByRole('button', { name: '저장하기' }).click();
+        at C:\Users\masocampus\Desktop\memo\tests\memo-creation.spec.ts:23:35
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>
