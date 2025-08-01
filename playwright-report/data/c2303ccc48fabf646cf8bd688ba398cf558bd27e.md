@@ -1,0 +1,139 @@
+# Page snapshot
+
+```yaml
+- banner:
+  - heading "📝 메모 앱" [level=1]
+  - button "새 메모":
+    - img
+    - text: 새 메모
+- main:
+  - img
+  - textbox "메모 검색..."
+  - combobox:
+    - option "전체 카테고리" [selected]
+    - option "개인 (1)"
+    - option "업무 (1)"
+    - option "학습 (1)"
+    - option "아이디어 (1)"
+    - option "기타 (0)"
+  - text: 총 4개의 메모
+  - heading "222" [level=3]
+  - text: 개인 2025년 8월 1일 오후 02:31
+  - button "편집":
+    - img
+  - button "삭제":
+    - img
+  - paragraph: "22222"
+  - heading "프로젝트 회의 준비" [level=3]
+  - text: 업무 2025년 7월 30일 오후 02:28
+  - button "편집":
+    - img
+  - button "삭제":
+    - img
+  - paragraph: 다음 주 월요일 오전 10시 프로젝트 킥오프 미팅을 위한 준비사항:\n\n- 프로젝트 범위 정의서 작성\n- 팀원별 역할 분담\n- 일정 계획 수립\n- 필요한 리소스 정리
+  - text: "#회의 #프로젝트 #준비"
+  - heading "React 18 새로운 기능 학습" [level=3]
+  - text: 학습 2025년 7월 31일 오후 02:28
+  - button "편집":
+    - img
+  - button "삭제":
+    - img
+  - paragraph: React 18에서 새로 추가된 기능들을 학습해야 함:\n\n1. Concurrent Features\n2. Automatic Batching\n3. Suspense 개선사항\n4. useId Hook\n5. useDeferredValue Hook\n\n이번 주말에 공식 문서를 읽고 간단한 예제를 만들어보자.
+  - text: "#React #학습 #개발"
+  - 'heading "새로운 앱 아이디어: 습관 트래커" [level=3]'
+  - text: 아이디어 2025년 7월 29일 오후 02:28
+  - button "편집":
+    - img
+  - button "삭제":
+    - img
+  - paragraph: "매일 실천하고 싶은 습관들을 관리할 수 있는 앱:\\n\\n핵심 기능:\\n- 습관 등록 및 관리\\n- 일일 체크인\\n- 진행 상황 시각화\\n- 목표 달성 알림\\n- 통계 분석\\n\\n기술 스택: React Native + Supabase\\n출시 목표: 3개월 후"
+  - text: "#앱개발 #습관 #React Native"
+- heading "새 메모 작성" [level=2]
+- button:
+  - img
+- text: 제목 *
+- textbox "제목 *": 테스트 메모 제목
+- text: 카테고리
+- combobox "카테고리":
+  - option "개인" [selected]
+  - option "업무"
+  - option "학습"
+  - option "아이디어"
+  - option "기타"
+- text: 내용 * (마크다운 지원)
+- list:
+  - listitem:
+    - button "Add bold text (ctrl + b)":
+      - img
+  - listitem:
+    - button "Add italic text (ctrl + i)":
+      - img
+  - listitem:
+    - button "Add strikethrough text (ctrl + shift + x)":
+      - img
+  - listitem:
+    - button "Insert HR (ctrl + h)":
+      - img
+  - listitem:
+    - button "Insert title":
+      - img
+  - listitem
+  - listitem:
+    - button "Add a link (ctrl + l)":
+      - img
+  - listitem:
+    - button "Insert a quote (ctrl + q)":
+      - img
+  - listitem:
+    - button "Insert code (ctrl + j)":
+      - img
+  - listitem:
+    - button "Insert Code Block (ctrl + shift + j)":
+      - img
+  - listitem:
+    - button "Insert comment (ctrl + /)":
+      - img
+  - listitem:
+    - button "Add image (ctrl + k)":
+      - img
+  - listitem:
+    - button "Add table":
+      - img
+  - listitem
+  - listitem:
+    - button "Add unordered list (ctrl + shift + u)":
+      - img
+  - listitem:
+    - button "Add ordered list (ctrl + shift + o)":
+      - img
+  - listitem:
+    - button "Add checked list (ctrl + shift + c)":
+      - img
+  - listitem
+  - listitem:
+    - button "Open help":
+      - img
+- list:
+  - listitem:
+    - button "Edit code (ctrl + 7)":
+      - img
+  - listitem:
+    - button "Live code (ctrl + 8)":
+      - img
+  - listitem:
+    - button "Preview code (ctrl + 9)":
+      - img
+  - listitem
+  - listitem:
+    - button "Toggle fullscreen (ctrl + 0)":
+      - img
+- code: 테스트 메모 내용입니다.
+- textbox: 테스트 메모 내용입니다.
+- img
+- text: 태그
+- textbox "태그를 입력하고 Enter를 누르세요"
+- button "추가"
+- button "취소"
+- button "저장하기"
+- alert
+```

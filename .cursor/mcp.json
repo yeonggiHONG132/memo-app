@@ -5,15 +5,17 @@
       "args": [
         "-y",
         "@supabase/mcp-server-supabase@0.4.5",
-        "--project-ref=<project-ref>"
+        "--project-ref=idpecqosdpszvlmkutft"
       ],
       "env": {
-        "SUPABASE_ACCESS_TOKEN": "<personal-access-token>"
+        "SUPABASE_ACCESS_TOKEN": "sbp_419c491db9080dbd2d3769cdac8b62af034a5baa"
       }
     },
-    "playwright-mcp": {
+"playwright": {
       "command": "npx",
-      "args": ["@playwright/mcp@0.0.32"]
+      "args": [
+        "@playwright/mcp@latest"
+      ]
     },
     "context7": {
       "command": "npx",
